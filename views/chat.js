@@ -5,6 +5,8 @@ var messsage=document.getElementById('message');
     output=document.getElementById('output');
     send= document.getElementById('send');
     handle=document.getElementById('handle');
+    feedback=document.getElementById('feedback');
+
 
     send.addEventListener('click',function(){
         socket.emit('chat', {
@@ -13,6 +15,15 @@ var messsage=document.getElementById('message');
         });
     });
 
-    socket.on('chat',function(data){    
-        output.innerHTML+='<p><strong>'+data.handle+':</strong>'+data.messsage+':</p>';
+    messsage.addEventListener('keypress',function(){
+        socket.emit('typing', handle.value);
+    });
+
+    socket.on('chat',function(data){
+        feedback.innerHTML="";
+        output.innerHTML+='<p><strong>'+data.handle+'</strong>'+ data.messsage+' </p>';
+    });
+
+    socket.on('typing',function(val){
+        feedback.innerHTML='<p><em>'+ val +' is typing ... </em></p>';
     });
