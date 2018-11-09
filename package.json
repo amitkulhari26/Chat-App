@@ -1,0 +1,31 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Simple chat-app using Node Js, Express Js, Socket IO, HTML5,& CSS3",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitkulhari26/Chat-App.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "Socket.IO",
+    "HTML5",
+    "CSS3"
+  ],
+  "author": "Amit Kulhari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitkulhari26/Chat-App/issues"
+  },
+  "homepage": "https://github.com/amitkulhari26/Chat-App#readme"
+}
